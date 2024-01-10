@@ -1,0 +1,175 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~react-datepicker/dist/react-datepicker.css";
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+.friends-container {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  margin-top: 20px;
+}
+
+.friends-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.friends-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.friends-container {
+  scrollbar-width: thin;
+  margin-right: 10px;
+}
+
+.friends-container::-moz-scrollbar {
+  width: 10px;
+}
+
+.friends-container::-moz-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.title-container {
+  flex-grow: 1;
+  animation: slideInContent 2s ease-out;
+  background-image: url("/public/images/lomo-libro.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  height: 100px;
+  opacity: 1;
+  margin-bottom: 10px;
+  margin-left: 50px;
+}
+
+.title-container h1 {
+  background: url("/public/images/textura-cuero.jpg") repeat;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+  margin: 0;
+}
+
+h3 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideInContent {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.button-container {
+  margin-bottom: 20px;
+  padding-right: 50px;
+}
+
+.rounded-button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffdeb887;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.button-text {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.733);
+}
+
+.header-container {
+  display: flex; /* O también puedes usar 'display: grid;' según tus necesidades */
+  justify-content: space-between;
+  align-items: center;
+}
